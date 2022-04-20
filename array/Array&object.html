@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <style>
+        #demo {
+            width: 331px;
+            background-color: rgb(67, 65, 65);
+        }
+        .class {
+            border: 2px solid black;
+            border-radius: 3px;
+            padding: 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3 class="class">BULB<h3>
+
+
+
+
+    <div id="demo">
+        <Button onclick='lightUp()'> Turn on</Button>
+        <img id="Img" src="media/pic_bulboff.gif" style="width:200px">
+        <Button onclick='document.getElementById("Img").src="media/pic_bulboff.gif"'> Turn off</Button>
+    </div>
+    <div class="class">
+        <p> <b>Addition and multiplication</b></p>
+    <p id="add"></p>
+    <p id="mul"></p>
+    </div>
+
+    <p id="object" class="class"></p>
+
+    <h3 class="class" >STARS</h3>
+
+    <script>
+        // bulb
+        function lightUp() {                //function declartion
+            document.getElementById("Img").src = "media/pic_bulbon.gif"
+
+
+        }
+        // star
+        for (let i = 1; i < 6; i++) {
+
+            for (let j = 0; j < i; j++) {
+                document.write(" # ");
+
+            }
+            document.write("<br/>");
+
+        }
+         //operators 
+        var x = 3;      //variable declaration & assignment operator
+        var y = 6;      //variable declaration & assignment operator
+        const z = 9;    //variable declaration & assignment operator
+        q = x + y;      //addition  operator 
+        r = x * z;      //multiplication operator
+        document.getElementById("add").innerHTML = q;
+        document.getElementById("mul").innerHTML = r;
+        
+        //object
+         var house = {
+             type : "Villa",
+             location : "mansarovar",
+             size : "400 yard",
+
+         }
+         document.getElementById("object").innerHTML =
+         house.type + " is in " + house.location + " of " + house.size;
+    </script>
+</body>
+
+</html>
